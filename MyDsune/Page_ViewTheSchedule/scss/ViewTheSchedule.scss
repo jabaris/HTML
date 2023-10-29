@@ -1,0 +1,256 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: normal;
+	font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*----------------------------------------------*/
+.wrapper{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container{
+    max-width: 358px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 5px;
+}
+._button {
+    min-width: 250px;
+    font-size: 20px;
+	font-weight: 400;
+    height: 60px;
+	line-height: normal;
+	color: #080817;
+    border-radius: 40px;
+    display: flex;
+	min-height: 36px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0px 13px 0px 12px;
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: -5px -5px 13px 0px rgba(219, 187, 210, 0.90), 5px 5px 10px 0px rgba(255, 239, 255, 0.90), -5px 5px 10px 0px rgba(219, 187, 210, 0.20), 5px -5px 10px 0px rgba(219, 187, 210, 0.20), 1px 1px 2px 0px rgba(219, 187, 210, 0.50) inset, -1px -1px 2px 0px rgba(255, 239, 255, 0.30) inset;
+}
+
+/*-------------------Header--------------------------------------------------*/
+
+.header {
+
+    .header__container {
+
+        .header__row {
+            border-radius: 40px;
+            background: linear-gradient(180deg, #FFD5EF 0%, rgba(255, 213, 239, 0.00) 77.8%);
+            min-height: 157px;
+            margin: 34px 0 0 0;
+            padding: 23px 0 0 0;
+            .row__top{
+                display: flex;
+                justify-content: space-between;
+                margin: 0 16px;
+                .header__logo {
+                    a{
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: inherit;
+                        text-transform: uppercase;  
+                    }
+                    span{
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+
+                
+                }
+                .header__icons {
+                    a:first-child{
+                        margin: 0 20px 0 0;
+                    }
+                }
+            }
+            .header__text {
+                margin: 0 0 0 8px;
+                padding: 41px 0 0 0;
+                p{
+                    font-size: 26px;
+                    font-weight: 400;
+                    letter-spacing: 3px;
+                }
+            }
+
+        }
+    }
+}
+
+/*----------------------------------------MAIN------------------------------------*/
+
+.main {
+
+    .main__container {
+
+        .main__row {
+            display: flex;
+            flex-direction: column;
+            .main__months{
+                display: flex;
+                overflow: hidden;
+                max-width: 358px;
+                overflow-x:visible;
+                margin: 0 0 15px 0;
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+                .month{
+                    font-size: 22px;
+                    text-align: center;
+                    font-weight: 400;
+                    cursor: pointer;
+                    &:not(:last-child){
+                        margin: 0 28px 0 0;
+                    }
+                }
+            }
+
+            .main__days {
+                display: flex;
+                overflow: hidden;
+                overflow-x: scroll;
+                margin: 0 0 32px 0;
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+                
+                
+                
+                .day {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2px 0;
+                    min-height: 70px;
+                    min-width: 40px;
+                    border-radius: 30px;
+                    background: rgba(255, 213, 239, 0.60);
+                    cursor: pointer;
+                    &:not(:last-child){
+                        margin: 0 14px 0 0;
+                    }
+
+                    span{
+                        position: relative;
+                        font-size: 16px;
+                        font-weight: 400;
+
+                        &:first-child{
+                            padding: 0 0 5px 0;
+                            margin: 0 0 5px 0;
+                        }
+                        &:first-child::after{
+                            content: "";
+                            position: absolute;
+                            top: 90%;
+                            right: 6%;
+                            width: 14px;
+                            height: 1px;
+                            background: #000;
+                        }
+                    }
+                }
+            }
+
+
+            .main__lessons {
+                margin: 0 0 40px 0;
+                border-radius: 40px;
+                background: linear-gradient(135deg, #FFF 0%, #F2F2F2 100%);
+                box-shadow: -5px -5px 13px 0px rgba(219, 219, 219, 0.90), 5px 5px 10px 0px rgba(255, 255, 255, 0.90), -5px 5px 10px 0px rgba(219, 219, 219, 0.20), 5px -5px 10px 0px rgba(219, 219, 219, 0.20), 1px 1px 2px 0px rgba(219, 219, 219, 0.50) inset, -1px -1px 2px 0px rgba(255, 255, 255, 0.30) inset;
+                .lesson {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    position: relative;
+                    cursor: pointer;
+                    .lesson__number {
+                        display: flex;
+                        align-items: center;
+                        font-size: 35px;
+                        padding: 0 0 0 20px;
+                        width: 74px;
+                        height: 72px;
+                        border-radius: 50%;
+                    }
+
+                    .lesson__name {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        p:first-child{
+                            text-align: center;
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+                        p:last-child{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #00DAFF;
+                        }
+                    }
+
+                    .lesson__classroom {
+                        display: flex;
+                        align-items: center;
+                        font-size: 35px;
+                        font-weight: 400;
+                        width: 74px;
+                        height: 72px;
+                    }
+                    .active{
+                        display: flex;
+                        height: 150px;
+                        
+                    }
+
+                }
+                
+
+                
+            }
+
+        }
+    }
+}
+
